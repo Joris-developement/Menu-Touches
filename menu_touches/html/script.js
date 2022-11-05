@@ -10,16 +10,13 @@ $(function() {
             if (i.Infos) {
                 $('.player-name').css('display', 'block');
                 ShowPlayerInfos(i.Infos.id ,i.Infos.name)
+                $('.player-name').html('');
+                $('.player-name').append(`
+                    <p>id: [<span style='color:#00ffff'>${i.Infos.id}</span>] name:[<span style='color:red'>${i.Infos.name}</span>]</p>
+                `);
             } else if (i.Infos === false) {
                 $('.player-name').css('display', 'none');
             }
         });
     })
-})
-
-ShowPlayerInfos = (function(id, playername) {
-    $('.player-name').html('');
-    $('.player-name').append(`
-        <p>id: [<span style='color:#00ffff'>${id}</span>] name:[<span style='color:red'>${playername}</span>]</p>
-    `);
 })
