@@ -9,7 +9,6 @@ $(function() {
             }
             if (i.Infos) {
                 $('.player-name').css('display', 'block');
-                ShowPlayerInfos(i.Infos.id ,i.Infos.name)
                 $('.player-name').html('');
                 $('.player-name').append(`
                     <p>id: [<span style='color:#00ffff'>${i.Infos.id}</span>] name:[<span style='color:red'>${i.Infos.name}</span>]</p>
